@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Monetag verification -->
   <meta name="monetag" content="9fbda67c20fa68f8b2eff870f448ebe6">
+
   <title>Afikira Hustle Hub</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
   <style>
-    body {
-      background-color: #121212;
-      color: #e0e0e0;
+    :root{
+      --bg:#121212;--card:#1b1b1b;--muted:#b9b9b9;--brand:#ffc107;--accent:#0dcaf0;
     }
-    .quote-box {
-      background: #1e1e1e;
-      border-radius: 12px;
-      padding: 15px;
-      margin-bottom: 15px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
-    }
-    .btn-copy {
-      float: right;
-    }
-    footer {
-      background: #000;
-      color: #aaa;
-      padding: 20px;
-      text-align: center;
-      margin-top: 50px;
-    }
-    a { color: #0dcaf0; }
+    body{ background:var(--bg); color:#eee; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",sans-serif; }
+    a{ color:var(--accent); }
+    .navbar{ background:#0f0f0f!important; }
+    .hero{ padding:90px 0 40px; text-align:center; }
+    .hero h1{ color:var(--brand); font-weight:800; }
+    .section{ padding:60px 0; }
+    .card-dark{ background:var(--card); border:none; box-shadow:0 6px 24px rgba(0,0,0,.35); }
+    .pill{ display:inline-block; padding:6px 12px; border-radius:999px; background:#0f0f0f; color:#ddd; margin:.15rem .25rem; font-size:.85rem; }
+    .quote{ background:var(--card); border-left:5px solid var(--brand); border-radius:12px; padding:12px 14px; margin:10px 0; position:relative; }
+    .quote .copy{ position:absolute; right:10px; top:10px; }
+    .subtle{ color:var(--muted); }
+    .post{ background:var(--card); border-radius:14px; padding:18px; margin-bottom:16px; }
+    .post h4{ margin-bottom:.25rem; }
+    footer{ background:#0a0a0a; color:#aaa; padding:28px 0; text-align:center; }
+    .divider{ height:1px; background:#2a2a2a; margin:30px 0; }
+    .badge-cat{ background:#2a2a2a; color:#ddd; }
+    .sticky-tools{ position:sticky; top:72px; }
+    .btn-brand{ background:var(--brand); border:none; color:#1b1b1b; font-weight:700; }
+    .btn-brand:hover{ opacity:.9; color:#111; }
+    .muted-link{ color:#9ad3ff; text-decoration:none; }
+    .muted-link:hover{ text-decoration:underline; }
+    .small-muted{ font-size:.85rem; color:var(--muted); }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- NAV -->
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#">Afikira Hustle Hub</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div id="nav" class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#hustle">Hustle Online</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hustle">Hustles</a></li>
           <li class="nav-item"><a class="nav-link" href="#quotes">Quotes</a></li>
           <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -51,83 +58,323 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="text-center py-5">
-    <div class="container">
-      <h1 class="fw-bold">Welcome to Afikira Hustle Hub</h1>
-      <p class="lead">Learn Online Hustles 💻 | Affiliate & Monetization 📈 | Motivation & Love ❤️</p>
-      <a href="#hustle" class="btn btn-info mt-3">Explore Now</a>
+  <!-- HERO -->
+  <header class="hero container">
+    <h1>Welcome to Afikira Hustle Hub</h1>
+    <p class="lead subtle">Online Hustles 💻 • Affiliate & Monetization 📈 • Motivation & Love 💛</p>
+    <div class="mt-3">
+      <a href="#hustle" class="btn btn-brand btn-lg me-2">Explore Hustles</a>
+      <a href="#quotes" class="btn btn-outline-warning btn-lg">Browse Quotes</a>
     </div>
-  </section>
-
-  <!-- Hustle Section -->
-  <section id="hustle" class="py-5">
-    <div class="container">
-      <h2 class="fw-bold mb-4">💻 Hustle Online</h2>
-      <p>Here you’ll find guides on Affiliate Marketing, Monetization, CPA Offers, Blogging, and Smart Online Hustles. Both in English and Hausa for better understanding.</p>
+    <div class="mt-3">
+      <span class="pill">#Affiliate</span>
+      <span class="pill">#CPA</span>
+      <span class="pill">#Blogging</span>
+      <span class="pill">#Transcription</span>
+      <span class="pill">#WebsiteTesting</span>
     </div>
-  </section>
+  </header>
 
-  <!-- Quotes Section -->
-  <section id="quotes" class="py-5 bg-dark">
+  <!-- HUSTLE -->
+  <section id="hustle" class="section">
     <div class="container">
-      <h2 class="fw-bold mb-4 text-info">💡 Motivational & Love Quotes</h2>
-      <div id="quotes-list">
-        <!-- Example Quote -->
-        <div class="quote-box">
-          <span>"Success doesn’t come to you, you go to it." – English</span>
-          <button class="btn btn-sm btn-outline-info btn-copy" onclick="copyQuote(this)">Copy</button>
+      <div class="row g-4">
+        <div class="col-lg-7">
+          <div class="card card-dark p-4 h-100">
+            <h2 class="mb-3">💼 Hustle Online (English)</h2>
+            <ul class="mb-3">
+              <li><b>Affiliate Marketing:</b> Promote products; earn per sale/lead.</li>
+              <li><b>CPA / Smartlinks:</b> Get paid when users sign up or install apps.</li>
+              <li><b>Blogging + Ads:</b> Write useful content; monetize with AdSense/Monetag.</li>
+              <li><b>Freelancing:</b> Offer writing/design/editing on Fiverr/Upwork.</li>
+              <li><b>Transcription & Data Tasks:</b> Appen, TranscribeMe, UHRS, Remotasks.</li>
+              <li><b>Website Testing:</b> UserTesting, Testbirds, uTest—get paid per test.</li>
+            </ul>
+            <h3 class="mb-2">💡 Hausa Version</h3>
+            <ul class="mb-0">
+              <li><b>Affiliate:</b> Ka tallata kaya/sabis; ka samu kaso idan aka yi rajista/siya.</li>
+              <li><b>CPA:</b> Ana biyan ka idan mutum ya cika form/ya shigar da app.</li>
+              <li><b>Blog + Ads:</b> Rubuta abubuwan amfani; saka tallace-tallace ka samu kuɗi.</li>
+              <li><b>Freelance:</b> Ka bada sabis (rubutu, zane, gyara bidiyo) a Fiverr/Upwork.</li>
+              <li><b>Transcription:</b> Ka maida sauti zuwa rubutu; a biya ka.</li>
+              <li><b>Website Testing:</b> Ka gwada shafuka; a biya ka gwargwadon test.</li>
+            </ul>
+            <div class="divider"></div>
+            <p class="small-muted mb-0">Smartlinks: 
+              <a class="muted-link" href="https://otieu.com/4/9717001" target="_blank">Link 1</a> • 
+              <a class="muted-link" href="https://otieu.com/4/9715980" target="_blank">Link 2</a>
+            </p>
+          </div>
         </div>
-        <div class="quote-box">
-          <span>"Nasara bata zo maka kai tsaye ba, sai ka je wajenta." – Hausa</span>
-          <button class="btn btn-sm btn-outline-info btn-copy" onclick="copyQuote(this)">Copy</button>
+        <div class="col-lg-5">
+          <div class="sticky-tools">
+            <div class="card card-dark p-4 mb-3">
+              <h5 class="mb-2">Quick Start</h5>
+              <ol class="small mb-0">
+                <li>Create a niche plan (1–2 topics).</li>
+                <li>Publish 2 useful posts weekly.</li>
+                <li>Share to Facebook/WhatsApp groups.</li>
+                <li>Collect leads with compelling CTAs.</li>
+              </ol>
+            </div>
+            <div class="card card-dark p-4">
+              <h5 class="mb-2">Contact</h5>
+              <p class="mb-2"><a href="https://wa.me/message/44SZSNWFNPZZC1" class="btn btn-success w-100">Chat on WhatsApp</a></p>
+              <p class="mb-2"><a href="https://www.facebook.com/profile.php?id=61572267547122" class="btn btn-primary w-100">Facebook Page</a></p>
+              <p class="mb-0"><a href="https://smarthustledaily1.blogspot.com" class="btn btn-outline-warning w-100">Visit Blog</a></p>
+            </div>
+          </div>
         </div>
-        <!-- 🔥 Inserted 100+ quotes here (English & Hausa alternating) -->
       </div>
     </div>
   </section>
 
-  <!-- Blog Section -->
-  <section id="blog" class="py-5">
+  <!-- QUOTES -->
+  <section id="quotes" class="section">
     <div class="container">
-      <h2 class="fw-bold mb-4">📝 Blog Posts</h2>
-      <div class="mb-4 p-4 bg-dark rounded">
-        <h4>Getting Started with Affiliate Marketing</h4>
-        <small class="text-muted">Posted: Aug 2025</small>
-        <p>Affiliate marketing is one of the fastest ways to earn online. You simply promote products and earn commission on sales...</p>
+      <h2 class="mb-3">💡 Motivational & ❤️ Love Quotes (English + Hausa)</h2>
+      <p class="subtle mb-4">Tap “Copy” to copy any quote for your post/status. (Danna “Copy” don kwafe quote.)</p>
+
+      <!-- Filters -->
+      <div class="mb-3">
+        <span class="badge rounded-pill badge-cat me-2">All</span>
+        <button class="btn btn-sm btn-outline-warning me-2" onclick="showGroup('mot-en')">Motivational (EN)</button>
+        <button class="btn btn-sm btn-outline-warning me-2" onclick="showGroup('mot-ha')">Motivational (HA)</button>
+        <button class="btn btn-sm btn-outline-warning me-2" onclick="showGroup('love-en')">Love (EN)</button>
+        <button class="btn btn-sm btn-outline-warning" onclick="showGroup('love-ha')">Love (HA)</button>
       </div>
-      <div class="mb-4 p-4 bg-dark rounded">
-        <h4>Yadda Ake Samun Kudi da Blogging</h4>
-        <small class="text-muted">Posted: Aug 2025</small>
-        <p>Blogging hanya ce mai kyau ta samun kudi online. Abinda ake bukata shine domain, hosting ko free platform kamar Blogger...</p>
-      </div>
-      <!-- Add more posts manually here by copy-pasting block -->
+
+      <div id="quotes-wrap"></div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-5 bg-dark">
-    <div class="container text-center">
-      <h2 class="fw-bold mb-4 text-info">📩 Contact Us</h2>
-      <p>WhatsApp: <a href="https://wa.me/message/44SZSNWFNPZZC1">Click Here</a></p>
-      <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61572267547122">Afikira</a></p>
+  <!-- BLOG -->
+  <section id="blog" class="section">
+    <div class="container">
+      <h2 class="mb-3">📝 Blog Posts</h2>
+      <p class="subtle">Add your posts by duplicating the block below inside the HTML.</p>
+
+      <!-- POST TEMPLATE (copy this block to add a new post)
+      <article class="post">
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge badge-cat">Category</span>
+          <small class="subtle">Date: 2025-08-10</small>
+        </div>
+        <h4 class="mt-2">Post Title Here</h4>
+        <p>Post content goes here...</p>
+        <p class="small-muted">CTA: <a class="muted-link" href="#" target="_blank">Smartlink</a></p>
+      </article>
+      -->
+
+      <!-- Demo Posts -->
+      <article class="post">
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge badge-cat">Affiliate</span>
+          <small class="subtle">Date: 2025-08-10</small>
+        </div>
+        <h4 class="mt-2">Getting Started with Affiliate Marketing (Beginner Guide)</h4>
+        <p>Pick a niche, join a network (Impact/ShareASale/Monetag Smartlink), create simple content (blog or Facebook page), and drive traffic consistently. Track clicks and improve your CTAs.</p>
+        <p class="small-muted">Try: <a class="muted-link" href="https://otieu.com/4/9717001" target="_blank">Smartlink #1</a></p>
+      </article>
+
+      <article class="post">
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge badge-cat">Blogging</span>
+          <small class="subtle">Date: 2025-08-10</small>
+        </div>
+        <h4 class="mt-2">Yadda Ake Samun Kuɗi da Blogging (Hausa)</h4>
+        <p>Zaɓi niche ɗaya, rubuta abubuwan da mutane ke nema (how-to, lists, tips), saka tallace-tallace ko CPA smartlinks, sannan ka rarraba posts a Facebook/Groups/Status.</p>
+        <p class="small-muted">Smartlink: <a class="muted-link" href="https://otieu.com/4/9715980" target="_blank">Link #2</a></p>
+      </article>
+
+      <article class="post">
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge badge-cat">Tasks</span>
+          <small class="subtle">Date: 2025-08-10</small>
+        </div>
+        <h4 class="mt-2">Quick Tasks that Pay (Testing, Transcription, Micro-jobs)</h4>
+        <p>Apply to UserTesting, Testbirds, Appen, and UHRS. Start with short tasks, maintain high accuracy, and scale your weekly hours for higher payouts.</p>
+      </article>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="card card-dark p-4">
+        <h3 class="mb-3">📩 Contact & Links</h3>
+        <p class="mb-2"><a class="btn btn-success me-2" href="https://wa.me/message/44SZSNWFNPZZC1" target="_blank">WhatsApp</a>
+           <a class="btn btn-primary me-2" href="https://www.facebook.com/profile.php?id=61572267547122" target="_blank">Facebook</a>
+           <a class="btn btn-outline-warning" href="https://smarthustledaily1.blogspot.com" target="_blank">My Blog</a></p>
+        <p class="small-muted mb-0">Email: <a class="muted-link" href="mailto:afikiraphotos9647@gmail.com">afikiraphotos9647@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>© 2025 Afikira Hustle Hub. All rights reserved.</p>
+    <div class="container">&copy; 2025 Afikira Hustle Hub — Built with Bootstrap</div>
   </footer>
 
-  <script>
-    function copyQuote(btn) {
-      let text = btn.parentElement.querySelector("span").innerText;
-      navigator.clipboard.writeText(text);
-      btn.innerText = "Copied!";
-      setTimeout(()=>{ btn.innerText="Copy"; },1500);
-    }
-  </script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- QUOTES DATA + RENDER -->
+  <script>
+    // 100 QUOTES (25 each group)
+    const MOT_EN = [
+      "Success is built daily, not instantly.",
+      "Small steps today, big results tomorrow.",
+      "Discipline beats motivation when motivation fades.",
+      "Focus on progress, not perfection.",
+      "Hustle in silence; let success be the noise.",
+      "Your only limit is your mindset.",
+      "Dream big, start small, act now.",
+      "Consistency turns goals into results.",
+      "Don’t wish for it—work for it.",
+      "You don’t need permission to be great.",
+      "The secret is to start before you’re ready.",
+      "Losers quit when tired; winners quit when done.",
+      "Direction is more important than speed.",
+      "You become what you repeatedly do.",
+      "Excuses don’t pay bills, effort does.",
+      "Storms make trees take deeper roots.",
+      "Courage is a muscle—train it daily.",
+      "Learn, unlearn, relearn. Repeat.",
+      "Your future needs your present effort.",
+      "Win the morning, win the day.",
+      "The grind will introduce you to yourself.",
+      "Preparation makes luck look like magic.",
+      "Turn pressure into performance.",
+      "Energy flows where focus goes.",
+      "Build habits that build you."
+    ];
+
+    const MOT_HA = [
+      "Nasara ana gina ta a hankali, ba take-take ba.",
+      "Ƙanana matakai yau—babban sakamako gobe.",
+      "Daidaito ya fi kuzari lokacin da kuzari ya gushe.",
+      "Ka mai da hankali ga cigaba, ba cikawa ba.",
+      "Ka yi aiki a shiru; nasara ta yi ihu.",
+      "Iyakarka ita ce tunaninka.",
+      "Ka yi mafarki babba, ka fara kaɗan, ka yi yanzu.",
+      "Daidaito yana juya buri zuwa sakamako.",
+      "Kada ka roƙi—ka yi aiki ka samu.",
+      "Ba ka buƙatar izini don ka zama babba.",
+      "Asirin nasara: ka fara kafin ka shirya sosai.",
+      "Mai rauni yana daina, mai ƙarfi yana ƙarewa.",
+      "Hanya ta fi sauri muhimmanci.",
+      "Abin da ka maimaita, shi kake zama.",
+      "Uzuri baya biya, ƙoƙari ne ke biya.",
+      "Guguwar rayuwa tana ƙarfafa tushenka.",
+      "Jarumtaka tsoka ce—a rika motsa ta.",
+      "Koyi, ajiye, ka koya sabo—kullum.",
+      "Gaba ɗaya naka na gobe na buƙatar ƙoƙarinka na yau.",
+      "Ka lashe safe, ka lashe yini.",
+      "Aiki zai nuna maka wanene kai.",
+      "Shiri yana sa arziki ya zama kamar sihiri.",
+      "Tsanani ka maida shi aiki.",
+      "Inda hankali ya tsaya, can albarka take.",
+      "Ka gina halaye masu gina ka."
+    ];
+
+    const LOVE_EN = [
+      "You are my today and all of my tomorrows.",
+      "In your smile, I see my favorite place.",
+      "Home is wherever I’m with you.",
+      "You’re the peace I didn’t know I needed.",
+      "I still fall for you every single day.",
+      "Your voice is my favorite sound.",
+      "We loved with a love that was more than love.",
+      "You’re the reason my heart learns new songs.",
+      "Every love story is beautiful, but ours is my favorite.",
+      "You are my sunshine on the darkest days.",
+      "I choose you. And I’ll choose you over and over.",
+      "My heart found its home in you.",
+      "I want all of my sunsets with you.",
+      "You’re my best decision.",
+      "With you, the ordinary feels magical.",
+      "Your hand fits in mine like it’s made for me.",
+      "I saw that you were perfect, and I loved you.",
+      "Then I saw that you were not perfect, and I loved you even more.",
+      "You’re the poem I never knew how to write.",
+      "I’m most me when I’m with you.",
+      "I’d rather spend one lifetime with you than face all the ages alone.",
+      "If I know what love is, it is because of you.",
+      "To me, you are perfect.",
+      "My favorite place is next to you.",
+      "Your love feels like home."
+    ];
+
+    const LOVE_HA = [
+      "Kai ne yau da duk gobe nawa.",
+      "A cikin murmushinka na ga wurina na musamman.",
+      "Gida duk inda nake tare da kai.",
+      "Kai ne nutsuwar da ban san ina nema ba.",
+      "Ina sake faɗuwa cikin sonka kowace rana.",
+      "Muryarka ita ce sautin da nake so in ji.",
+      "Mun ƙaunaci juna da ƙauna fiye da duk wata.",
+      "Kai ne dalilin da zuciyata ke koyon sabbin waƙoƙi.",
+      "Kowace labarin soyayya yana da kyau, amma namu shi ne mafi soyuwa.",
+      "Kai ne hasken rana a ranakun duhu.",
+      "Na zaɓe ka, kuma zan ci gaba da zaɓar ka.",
+      "Zuciyata ta sami gidanta a tare da kai.",
+      "Ina so in kalle dukkan faɗuwar rana tare da kai.",
+      "Kai ne shawara mafi kyau da na taɓa yanke.",
+      "Tare da kai, abin yau da kullum na zama sihiri.",
+      "Hannunka ya dace da nawa kamar an halicce su tare.",
+      "Na ga cikawa a tare da kai, sai na ƙaunace ka.",
+      "Na ga rashin cikawa a tare da kai, sai na ƙaunace ka fiye da da.",
+      "Kai ne baitin da ban taɓa iya rubutawa ba.",
+      "Ina zama ni na gaskiya idan ina tare da kai.",
+      "Zan fi so in shafe rayuwa ɗaya tare da kai fiye da zamani ba tare da kai ba.",
+      "Idan na san menene soyayya, saboda kai ne.",
+      "A wurina, kai ne cikawa.",
+      "Wurina mafi soyuwa shine gefenka.",
+      "Sonnka kamar gida yake ji."
+    ];
+
+    // RENDER
+    function renderQuotes(){
+      const wrap = document.getElementById('quotes-wrap');
+      wrap.innerHTML='';
+      const groups = [
+        {id:'mot-en', title:'Motivational (EN)', arr:MOT_EN},
+        {id:'mot-ha', title:'Motivational (HA)', arr:MOT_HA},
+        {id:'love-en', title:'Love (EN)', arr:LOVE_EN},
+        {id:'love-ha', title:'Love (HA)', arr:LOVE_HA},
+      ];
+      groups.forEach(g=>{
+        const h = document.createElement('h5');
+        h.className='mt-4 mb-2';
+        h.textContent = g.title;
+        h.dataset.group = g.id;
+        wrap.appendChild(h);
+        g.arr.forEach((q,i)=>{
+          const d = document.createElement('div');
+          d.className='quote';
+          d.dataset.group = g.id;
+          d.innerHTML = `
+            <button class="btn btn-sm btn-outline-warning copy" onclick="copyQuote(this)">Copy</button>
+            <span>${i+1}. ${q}</span>
+          `;
+          wrap.appendChild(d);
+        });
+      });
+    }
+    function copyQuote(btn){
+      const text = btn.parentElement.querySelector('span').innerText;
+      navigator.clipboard.writeText(text);
+      btn.innerText='Copied!';
+      setTimeout(()=>btn.innerText='Copy',1200);
+    }
+    function showGroup(groupId){
+      const nodes = document.querySelectorAll('#quotes-wrap [data-group]');
+      nodes.forEach(n=>{
+        n.style.display = (n.dataset.group===groupId)?'block':'none';
+      });
+    }
+    // default render (show all)
+    document.addEventListener('DOMContentLoaded', renderQuotes);
+  </script>
 </body>
-</html>
+  </html>
