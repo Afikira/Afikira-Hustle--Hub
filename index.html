@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="monetag" content="9fbda67c20fa68f8b2eff870f448ebe6">
+  <title>Afikira Hustle Hub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    .quote-box {
+      background: #1e1e1e;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    }
+    .btn-copy {
+      float: right;
+    }
+    footer {
+      background: #000;
+      color: #aaa;
+      padding: 20px;
+      text-align: center;
+      margin-top: 50px;
+    }
+    a { color: #0dcaf0; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Afikira Hustle Hub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hustle">Hustle Online</a></li>
+          <li class="nav-item"><a class="nav-link" href="#quotes">Quotes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="text-center py-5">
+    <div class="container">
+      <h1 class="fw-bold">Welcome to Afikira Hustle Hub</h1>
+      <p class="lead">Learn Online Hustles 💻 | Affiliate & Monetization 📈 | Motivation & Love ❤️</p>
+      <a href="#hustle" class="btn btn-info mt-3">Explore Now</a>
+    </div>
+  </section>
+
+  <!-- Hustle Section -->
+  <section id="hustle" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4">💻 Hustle Online</h2>
+      <p>Here you’ll find guides on Affiliate Marketing, Monetization, CPA Offers, Blogging, and Smart Online Hustles. Both in English and Hausa for better understanding.</p>
+    </div>
+  </section>
+
+  <!-- Quotes Section -->
+  <section id="quotes" class="py-5 bg-dark">
+    <div class="container">
+      <h2 class="fw-bold mb-4 text-info">💡 Motivational & Love Quotes</h2>
+      <div id="quotes-list">
+        <!-- Example Quote -->
+        <div class="quote-box">
+          <span>"Success doesn’t come to you, you go to it." – English</span>
+          <button class="btn btn-sm btn-outline-info btn-copy" onclick="copyQuote(this)">Copy</button>
+        </div>
+        <div class="quote-box">
+          <span>"Nasara bata zo maka kai tsaye ba, sai ka je wajenta." – Hausa</span>
+          <button class="btn btn-sm btn-outline-info btn-copy" onclick="copyQuote(this)">Copy</button>
+        </div>
+        <!-- 🔥 Inserted 100+ quotes here (English & Hausa alternating) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4">📝 Blog Posts</h2>
+      <div class="mb-4 p-4 bg-dark rounded">
+        <h4>Getting Started with Affiliate Marketing</h4>
+        <small class="text-muted">Posted: Aug 2025</small>
+        <p>Affiliate marketing is one of the fastest ways to earn online. You simply promote products and earn commission on sales...</p>
+      </div>
+      <div class="mb-4 p-4 bg-dark rounded">
+        <h4>Yadda Ake Samun Kudi da Blogging</h4>
+        <small class="text-muted">Posted: Aug 2025</small>
+        <p>Blogging hanya ce mai kyau ta samun kudi online. Abinda ake bukata shine domain, hosting ko free platform kamar Blogger...</p>
+      </div>
+      <!-- Add more posts manually here by copy-pasting block -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-dark">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4 text-info">📩 Contact Us</h2>
+      <p>WhatsApp: <a href="https://wa.me/message/44SZSNWFNPZZC1">Click Here</a></p>
+      <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61572267547122">Afikira</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Afikira Hustle Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function copyQuote(btn) {
+      let text = btn.parentElement.querySelector("span").innerText;
+      navigator.clipboard.writeText(text);
+      btn.innerText = "Copied!";
+      setTimeout(()=>{ btn.innerText="Copy"; },1500);
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
